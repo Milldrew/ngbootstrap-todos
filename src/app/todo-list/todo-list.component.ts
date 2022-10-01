@@ -1,5 +1,7 @@
-import { Todo } from '../core/types/todo-list.types';
+import { Todo, TodoList } from '../core/types/todo-list.types';
 import { Component, Input, OnInit } from '@angular/core';
+import { TodoListStateService } from '../core/services/todo-list-state.service';
+import { CreateTodoService } from '../core/services/create-todo.service';
 
 @Component({
   selector: 'milldrew-todo-list',
@@ -8,29 +10,20 @@ import { Component, Input, OnInit } from '@angular/core';
   host: { class: 'card' },
 })
 export class TodoListComponent implements OnInit {
-  todos: Todo[];
+  todos: Todo[] | undefined;
   @Input()
   title: string = 'Todo List Title Placeholder';
 
-  constructor() {
-    this.todos = [
-      {
-        id: Math.random(),
-        todoText: "Something I haven't done",
-        isDone: false,
-      },
-      {
-        id: Math.random(),
-        todoText: 'Something i have done',
-        isDone: true,
-      },
-      {
-        id: Math.random(),
-        todoText:
-          'Something i have done that has a lot of text and might create a line break of stretch the parent elements width',
-        isDone: true,
-      },
-    ];
+  todoListData: TodoList;
+  constructor(
+    private createTodoService: CreateTodoService,
+    private todoListStateService: TodoListStateService
+  ) {
+    this.todoListData = this.todoListStateService.todoLists[0];
+  }
+  ngDoCheck() {
+    this.todoListData = this.todoListStateService.currentTodoList;
+    console.log(this.todoListData.todos);
   }
 
   ngOnInit(): void {}

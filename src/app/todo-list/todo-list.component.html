@@ -1,13 +1,15 @@
 <header class="card-header">
   <h5 class="card-title">
-    {{ title }}
+    {{ todoListData.todoListTitle }}
   </h5>
 </header>
 <main class="card-body">
-  <div
-    *ngFor="let todo of todos"
-    class="milldrew-todo"
-    [todoText]="todo.todoText"
-    [isDone]="todo.isDone"
-  ></div>
+  <ng-container *ngIf="todoListData.todos">
+    <div
+      *ngFor="let todo of todoListData.todos"
+      class="milldrew-todo"
+      [todoText]="todo.todoText"
+      [isDone]="todo.isDone"
+    ></div>
+  </ng-container>
 </main>

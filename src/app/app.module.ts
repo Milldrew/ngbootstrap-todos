@@ -8,12 +8,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TodoComponent, TodoListModule } from 'ngx-m-bootstrap';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { CreateTodoListButtonComponent } from './create-todo-list-button/create-todo-list-button.component';
 TodoComponent;
 export function HttpLoaderFactor(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 @NgModule({
-  declarations: [AppComponent, TodoListComponent],
+  declarations: [
+    AppComponent,
+    TodoListComponent,
+    CreateTodoListButtonComponent,
+  ],
   imports: [
     TodoListModule,
     BrowserModule,
