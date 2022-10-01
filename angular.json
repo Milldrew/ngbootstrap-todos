@@ -95,6 +95,37 @@
           }
         }
       }
+    },
+    "ngx-m-bootstrap": {
+      "projectType": "library",
+      "root": "projects/ngx-m-bootstrap",
+      "sourceRoot": "projects/ngx-m-bootstrap/src",
+      "prefix": "milldrew",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-m-bootstrap/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-m-bootstrap/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-m-bootstrap/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-m-bootstrap/src/test.ts",
+            "tsConfig": "projects/ngx-m-bootstrap/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-m-bootstrap/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngbootstrap-todos"

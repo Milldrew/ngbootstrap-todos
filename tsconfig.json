@@ -11,6 +11,16 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ng-m-bootstrap": [
+        "dist/ng-m-bootstrap/ng-m-bootstrap",
+        "dist/ng-m-bootstrap"
+      ],
+      "ngx-m-bootstrap": [
+        "dist/ngx-m-bootstrap/ngx-m-bootstrap",
+        "dist/ngx-m-bootstrap"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
