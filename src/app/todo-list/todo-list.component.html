@@ -1,10 +1,13 @@
 <header class="card-header">
-  <h3 class="card-title">
+  <h5 class="card-title">
     {{ title }}
-  </h3>
+  </h5>
 </header>
 <main class="card-body">
-  <div class="milldrew-todo"></div>
-  <div class="milldrew-todo"></div>
-  <div class="milldrew-todo"></div>
+  <div
+    *ngFor="let todo of todos"
+    class="milldrew-todo"
+    [todoText]="todo.todoText"
+    [isDone]="todo.isDone"
+  ></div>
 </main>

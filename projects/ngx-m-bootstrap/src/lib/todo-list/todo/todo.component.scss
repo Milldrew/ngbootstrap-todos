@@ -1,0 +1,15 @@
+$light-gray: #00000008;
+:host {
+  margin: {
+    top: 5px;
+    bottom: 5px;
+  }
+}
+:host(:hover) {
+  background-color: $light-gray;
+}
+
+label,
+input {
+  cursor: pointer;
+}

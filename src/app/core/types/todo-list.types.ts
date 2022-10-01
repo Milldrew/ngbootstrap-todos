@@ -1,10 +1,10 @@
-type Todo = {
+export type Todo = {
   id: number;
   todoText: string;
   isDone: boolean;
 };
 
-type TodoList = {
+export type TodoList = {
   id: number;
   todos: Todo[];
   todoListTitle: string;

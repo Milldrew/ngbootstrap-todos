@@ -8,7 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
   @Input()
-  todoText: string = 'Do foobar';
+  isDone: boolean = false;
+  @Input()
+  todoText: string = 'Do foobar from lib';
   @Input()
   isDisabled: boolean = false;
   LEADING_WHITE_SPACE = '  ';
