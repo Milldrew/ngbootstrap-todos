@@ -8,6 +8,7 @@ import { TodoList } from './core/types/todo-list.types';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  host: { class: 'container-fluid' },
 })
 export class AppComponent {
   title = 'ngbootstrap-todos';

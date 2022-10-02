@@ -1,2 +1,14 @@
-<milldrew-todo-list> </milldrew-todo-list>
-<milldrew-create-button> </milldrew-create-button>
+<nav class="navbar navbar-light bg-light">
+  <div>
+    <h1>Andrew's Todos</h1>
+  </div>
+</nav>
+<main>
+  <tabset [justified]="true">
+    <tab heading="Todo Lists" class="milldrew-list-lists"> </tab>
+    <tab heading="Current List" class="container-fluid">
+      <milldrew-todo-list> </milldrew-todo-list>
+      <milldrew-create-button> </milldrew-create-button>
+    </tab>
+  </tabset>
+</main>

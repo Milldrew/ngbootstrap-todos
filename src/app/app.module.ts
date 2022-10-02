@@ -1,3 +1,4 @@
+import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -9,6 +10,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TodoComponent, TodoListModule } from 'ngx-m-bootstrap';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { CreateTodoListButtonComponent } from './create-todo-list-button/create-todo-list-button.component';
+import { ListOfTodoListsComponent } from './list-of-todo-lists/list-of-todo-lists.component';
 TodoComponent;
 export function HttpLoaderFactor(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -18,8 +20,10 @@ export function HttpLoaderFactor(http: HttpClient) {
     AppComponent,
     TodoListComponent,
     CreateTodoListButtonComponent,
+    ListOfTodoListsComponent,
   ],
   imports: [
+    TabsModule,
     TodoListModule,
     BrowserModule,
     BrowserAnimationsModule,

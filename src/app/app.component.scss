@@ -4,3 +4,17 @@
   justify-content: center;
   flex-direction: column;
 }
+
+tabset,
+nav,
+main {
+  width: 100%;
+}
+
+tab {
+  padding-top: 25px;
+}
+
+h1 {
+  font-weight: 400;
+}
