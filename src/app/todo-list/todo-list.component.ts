@@ -1,7 +1,6 @@
 import { Todo, TodoList } from '../core/types/todo-list.types';
 import { Component, Input, OnInit } from '@angular/core';
 import { TodoListStateService } from '../core/services/todo-list-state.service';
-import { CreateTodoService } from '../core/services/create-todo.service';
 
 @Component({
   selector: 'milldrew-todo-list',
@@ -15,10 +14,7 @@ export class TodoListComponent implements OnInit {
   title: string = 'Todo List Title Placeholder';
 
   todoListData: TodoList;
-  constructor(
-    private createTodoService: CreateTodoService,
-    private todoListStateService: TodoListStateService
-  ) {
+  constructor(private todoListStateService: TodoListStateService) {
     this.todoListData = this.todoListStateService.todoLists[0];
   }
   ngDoCheck() {
