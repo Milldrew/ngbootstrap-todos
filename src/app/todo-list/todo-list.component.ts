@@ -6,7 +6,7 @@ import { TodoListStateService } from '../core/services/todo-list-state.service';
   selector: 'milldrew-todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss'],
-  host: { class: 'card' },
+  host: { class: 'card center-block' },
 })
 export class TodoListComponent implements OnInit {
   todos: Todo[] | undefined;

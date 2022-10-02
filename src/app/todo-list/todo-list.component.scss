@@ -1,5 +1,7 @@
 :host {
-  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
 }
 h5.card-title {
   font-weight: 400;

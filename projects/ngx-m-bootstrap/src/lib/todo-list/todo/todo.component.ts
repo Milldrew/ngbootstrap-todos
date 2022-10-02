@@ -13,7 +13,7 @@ export class TodoComponent implements OnInit {
   todoText: string = 'Do foobar from lib';
   @Input()
   isDisabled: boolean = false;
-  LEADING_WHITE_SPACE = '  ';
+  LEADING_WHITE_SPACE = '&nbsp';
 
   constructor() {}
 

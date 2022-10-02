@@ -11,6 +11,7 @@ import { TodoComponent, TodoListModule } from 'ngx-m-bootstrap';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { CreateTodoListButtonComponent } from './create-todo-list-button/create-todo-list-button.component';
 import { ListOfTodoListsComponent } from './list-of-todo-lists/list-of-todo-lists.component';
+import { CreateTodoButtonComponent } from './create-todo-button/create-todo-button.component';
 TodoComponent;
 export function HttpLoaderFactor(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -21,6 +22,7 @@ export function HttpLoaderFactor(http: HttpClient) {
     TodoListComponent,
     CreateTodoListButtonComponent,
     ListOfTodoListsComponent,
+    CreateTodoButtonComponent,
   ],
   imports: [
     TabsModule,

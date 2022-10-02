@@ -5,10 +5,12 @@
 </nav>
 <main>
   <tabset [justified]="true">
-    <tab heading="Todo Lists" class="milldrew-list-lists"> </tab>
-    <tab heading="Current List" class="container-fluid">
-      <milldrew-todo-list> </milldrew-todo-list>
-      <milldrew-create-button> </milldrew-create-button>
+    <tab heading="Todo Lists" class="milldrew-list-lists" [active]="true">
+    </tab>
+    <tab heading="Current List" class="container-fluid" [active]="false">
+      <milldrew-todo-list class="center-block"> </milldrew-todo-list>
+      <milldrew-create-todo-button class="center-block">
+      </milldrew-create-todo-button>
     </tab>
   </tabset>
 </main>
