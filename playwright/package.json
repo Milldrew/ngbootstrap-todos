@@ -1,0 +1,12 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.26.1"
+  },
+  "scripts": {
+    "chromium": "npx playwright test ./src/todo-list.spec.ts --headed --browser chromium"
+  }
+}
