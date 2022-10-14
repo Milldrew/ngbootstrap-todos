@@ -9,3 +9,7 @@ export type TodoList = {
   todos: Todo[];
   todoListTitle: string;
 };
+
+export type User = {
+  name: string;
+};
